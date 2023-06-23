@@ -47,7 +47,7 @@ export default function Navbar() {
             }
             lastScrollTop = scrollTop
         })
-    })
+    }, [])
 
     const HorizontalNavList = ({ link }) => {
         return (
@@ -64,7 +64,7 @@ export default function Navbar() {
 
     return (
         <nav id="nav" className='fixed w-full duration-700'>
-            <div className="flex justify-between items-center w-full h-12  bg-slate-800 text-slate-200 px-4">
+            <div className="flex justify-between items-center w-full h-12  bg-zinc-700 text-slate-200 px-4">
                 <h1 className="text-3xl ml-2 font-britney"> <span className='flex gap-[0.1px]'><span>Alef</span>iya Abbas </span></h1>
                 <ul className="hidden md:flex font-cabinet text-lg">
                     {links.map((link, index) => {
@@ -80,7 +80,7 @@ export default function Navbar() {
                     {Nav ? <FaTimes size={20} /> : <FaBars size={20} />}
                 </div>
                 {Nav && (
-                    <ul className="flex flex-col justify-center items-center fixed top-0 left-0 w-full h-full bg-gradient-to-b from-slate-900 to-slate-500 text-slate-200 font-cabinet">
+                    <ul className="flex flex-col justify-center items-center fixed top-0 left-0 w-full h-full bg-gradient-to-b from-zinc-900 to-zinc-500 text-slate-200 font-cabinet">
                         {links.map((link, index) => {
                             return <VerticalNavList key={index} link={link} />
                         })}
