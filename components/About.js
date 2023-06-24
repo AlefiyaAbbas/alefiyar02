@@ -6,12 +6,12 @@ export default function About() {
   return (
     <>
       <div className="w-full h-screen flex flex-col items-center justify-center bg-zinc-800 font-cabinet">
-        <div className="bg-slate-200 w-11/12 h-5/6">
+        <div className="bg-slate-200 w-11/12 h-auto py-8">
           <div className="flex flex-row justify-end">
             <Header />
           </div>
           <div className="flex flex-col  justify-center items-center m-2">
-            <Image src={Alef} alt="alefiya" className="w-36 h-36 border-4 border-zinc-800 m-2 md:hidden" />
+            <Image src={Alef} alt="alefiya" className="w-36 h-36 border-4 border-zinc-800 m-12 md:hidden" />
             <div className="md:flex">
               <div clasName="flex flex-row">
                 <div className="bg-zinc-800 md:w-96 md:h-96 mx-20 mt-10" />
