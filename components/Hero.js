@@ -9,19 +9,19 @@ export default function Hero() {
           initial={{ x: -1000 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5, delay: 0 }}
-          className='bg-[url("/images/hero.png")] h-5/6 w-10/12 my-4'
+          className='bg-[url("/images/hero.png")] h-5/6 w-10/12 my-4 '
         >
           <motion.div
             initial={{ x: -1000 }}
             animate={{ x: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className='flex flex-col justify-center bg-zinc-800 w-9/12 h-5/6 bg-opacity-95 my-12 px-10'
+            className='flex flex-col justify-center bg-zinc-800 w-9/12 h-5/6  my-12 px-10 bg-opacity-95'
           >
             <motion.div
               initial={{ x: -1000 }}
               animate={{ x: 0 }}
               transition={{ duration: 1, delay: 1 }}
-              className='text-6xl md:text-9xl text-slate-200'
+              className='text-6xl md:text-9xl text-teal-300'
             >
               Alefiya Abbas.
             </motion.div>
@@ -39,7 +39,7 @@ export default function Hero() {
               initial={{ x: -1000 }}
               animate={{ x: 0 }}
               transition={{ duration: 1, delay: 1.8 }}
-              className='border-2 border-solid border-slate-200 text-slate-200 p-4 w-40 text-xl hover:bg-slate-300 hover:text-zinc-800 duration-200'
+              className='border-2 border-solid border-slate-200 text-slate-200 p-4 w-40 text-xl hover:bg-teal-300 hover:text-zinc-800 hover:border-teal-300 duration-200'
             >
               Let&apos;s Connect!
             </motion.button>
