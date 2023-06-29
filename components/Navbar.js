@@ -1,91 +1,163 @@
-// import React from 'react';
-// import Link from 'next/link';
-// import localFont from 'next/font/local'
-
-// export const Navbar = () => {
-//     return (
-//         <header>
-//             <nav className="flex justify-around py-2 bg-slate-800 text-slate-200 items-center">
-//                 <div id="logo">
-//                     <Link href="/" className='text-3xl font-britney'>  <span className='flex gap-[0.1px]'><span>Alef</span>iya Abbas </span> </Link>
-//                 </div>
-//                 <div>
-//                 </div>
-//                 <ul className="flex gap-10 justify-around align-middle font-cabinet text-xl">
-//                     <li>
-//                         <Link href="/about"> About </Link>
-//                     </li>
-//                     <li>
-//                         <Link href="/experience"> Experiences </Link>
-//                     </li>
-//                     <li>
-//                         <Link href="/projects"> Projects </Link>
-//                     </li>
-//                 </ul>
-//             </nav>
-//         </header>
-//     );
-// };
-
-import { RxHamburgerMenu, RxCross2 } from 'react-icons/rx'
 import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navbar() {
-    const links = ['Home', 'About', 'Experience', 'Contact']
-    const [Nav, setNav] = useState(false)
+  const links = ['Home', 'About', 'Experience', 'Contact']
+  const [mobileNav, setMobileNav] = useState(false)
 
-    useEffect(() => {
-        let lastScrollTop = 0
-        let navbar = document.getElementById('nav')
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.scrollY || document.documentElement.scrollTop
-            if (scrollTop > lastScrollTop) {
-                navbar.style.top = '-100px'
-            }
-            else {
-                navbar.style.top = '0'
-            }
-            lastScrollTop = scrollTop
-        })
-    }, [])
+  useEffect(() => {
+    let lastScrollTop = 0
+    let navbar = document.getElementById('nav')
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.scrollY || document.documentElement.scrollTop
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = '-100px'
+      } else {
+        navbar.style.top = '0'
+      }
+      lastScrollTop = scrollTop
+    })
+  }, [])
 
-    const HorizontalNavList = ({ link }) => {
-        return (
-            <li className="px-4 cursor-pointer capitalize font-medium text-slate-200 hover:scale-105 duration-200">
-                {link}
-            </li>
-        )
-    }
-    const VerticalNavList = ({ link }) => {
-        return (
-            <li className="px-4 capitalize py-6 text-4xl cursor-pointer">{link}</li>
-        )
-    }
+  useEffect(() => {
+    let navbar = document.getElementById('nav')
+    navbar.style.top = '-100px'
+    setTimeout(() => {
+      navbar.style.top = '0'
+    }, 3000)
+  }, [])
 
+  const HorizontalNavList = ({ link }) => {
     return (
-        <nav id="nav" className='fixed w-full duration-700'>
-            <div className="flex justify-end items-center w-full h-12 bg-zinc-800 text-slate-200 px-4">
-                <ul className="hidden md:flex font-cabinet text-lg">
-                    {links.map((link, index) => {
-                        return <HorizontalNavList key={index} link={link} />
-                    })}
-                </ul>
-                <div
-                    onClick={() => {
-                        setNav(!Nav)
-                    }}
-                    className="cursor-pointer md:hidden text-slate-200 pr-4 z-10"
-                >
-                    {Nav ? <RxCross2 size={24} /> : <RxHamburgerMenu size={24} />}
-                </div>
-                {Nav && (
-                    <ul className="flex flex-col justify-center items-center fixed top-0 left-0 w-full h-full bg-gradient-to-b from-zinc-500 to-zinc-900 text-slate-200 font-cabinet">
-                        {links.map((link, index) => {
-                            return <VerticalNavList key={index} link={link} />
-                        })}
-                    </ul>
-                )}
-            </div>
-        </nav>
+      <li className='px-4 cursor-pointer capitalize font-medium  text-slate-200 hover:scale-105 duration-200'>
+        {link}
+      </li>
     )
+  }
+  const VerticalNavList = ({ link }) => {
+    return (
+      <motion.li
+        className='px-4 capitalize py-6 text-4xl cursor-pointer'
+        variants={{
+          open: {
+            y: 0,
+            opacity: 1
+          },
+          closed: {
+            y: '45%',
+            opacity: 0
+          }
+        }}
+      >
+        {link}
+      </motion.li>
+    )
+  }
+
+  const topVariants = {
+    open: { rotate: 45, y: 7, originX: '16px', originY: '10px' },
+    closed: { rotate: 0, y: 0, originX: 0, originY: 0 }
+  }
+
+  const centerVariants = {
+    open: { opacity: 0 },
+    closed: { opacity: 1 }
+  }
+
+  const bottomVariants = {
+    open: { rotate: -45, y: -5, originX: '16px', originY: '22px' },
+    closed: { rotate: 0, y: 0, originX: 0, originY: 0 }
+  }
+
+  return (
+    <nav id='nav' className='fixed w-full duration-200 font-cabinet z-50'>
+      <div className="flex justify-end items-center w-full h-12 bg-zinc-800 text-slate-200 px-4">
+        <ul className="hidden md:flex font-cabinet text-lg p-2">
+          {links.map((link, index) => {
+            return <HorizontalNavList key={index} link={link} />
+          })}
+        </ul>
+        <div
+          onClick={() => {
+            setMobileNav(!mobileNav)
+          }}
+          className='cursor-pointer md:hidden text-slate-200 pr-4 z-10'
+        >
+          <svg
+            width='40'
+            height='40'
+            viewBox='0 0 32 32'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <motion.rect
+              animate={mobileNav ? 'open' : 'closed'}
+              variants={topVariants}
+              transition={{ duration: 0.2 }}
+              x='6'
+              y='9'
+              width='20'
+              height='2'
+              rx='1'
+              fill='currentColor'
+            />
+            <motion.rect
+              animate={mobileNav ? 'open' : 'closed'}
+              variants={centerVariants}
+              transition={{ duration: 0.2 }}
+              x='6'
+              y='15'
+              width='20'
+              height='2'
+              rx='1'
+              fill='currentColor'
+            />
+            <motion.rect
+              animate={mobileNav ? 'open' : 'closed'}
+              variants={bottomVariants}
+              transition={{ duration: 0.2 }}
+              x='6'
+              y='21'
+              width='20'
+              height='2'
+              rx='1'
+              fill='currentColor'
+            />
+          </svg>
+        </div>
+        <AnimatePresence>
+          {mobileNav && (
+            <motion.div
+              variants={{
+                open: {
+                  y: '0%',
+                  transition: {
+                    when: 'beforeChildren',
+                    duration: 0.5
+                  }
+                },
+                closed: {
+                  y: '-100%',
+                  transition: {
+                    when: 'afterChildren',
+                    duration: 0.5
+                  }
+                }
+              }}
+              initial='closed'
+              animate={'open'}
+              exit={'closed'}
+              className='flex flex-col justify-center items-center fixed top-0 left-0 w-screen h-full bg-gradient-to-b from-black to-stone-900 opacity-90'
+            >
+              <ul className='text-center'>
+                {links.map((link, index) => {
+                  return <VerticalNavList key={index} link={link} />
+                })}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </nav>
+  )
 }
