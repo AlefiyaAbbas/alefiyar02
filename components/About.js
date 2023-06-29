@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import Alef from "../public/images/alefiya.png"
+import Alef from "../public/images/alef.png"
 import Image from 'next/image'
 
 export default function About() {
@@ -26,16 +26,16 @@ export default function About() {
           <motion.div
             initial={{ x: -1000 }}
             animate={{ x: 0 }}
-            transition={{ duration: 1, delay: 5.5 }}
-            className='bg-zinc-800 w-[40%] md:w-[98%] mt-6 md:mt-0'>
-            <Image src={Alef} className='relative translate-x-4 translate-y-4' />
+            transition={{ duration: 2, delay: 5.5 }}
+            className=' bg-teal-400 w-[40%] md:w-[98%] mt-10 mx-8 md:mt-0'>
+            <Image src={Alef} className='relative -translate-x-4 -translate-y-4 md:-translate-x-6 md:-translate-y-6 ' />
           </motion.div>
           <div style={{ overflow: 'hidden' }}>
             <motion.ul
               initial={{ x: 1000 }}
               animate={{ x: 0 }}
               transition={{ duration: 1, delay: 5.5 }}
-              className="flex flex-col gap-4 text-zinc-800 text-xl md:text-3xl text-justify px-8 py-2 md:p-10 md:leading-10">
+              className="flex flex-col gap-4 text-zinc-800 text-xl md:text-3xl text-justify px-8  md:p-10 md:leading-10">
               <li className="text-center md:text-left text-2xl md:text-3xl"> Hello World, I&apos;m <b>Alefiya!</b> </li>
               <li> An aspiring engineer in <b>Computer Science</b> with a deep passion for <b>Artificial Intelligence and Machine Learning</b>.</li>
               <li>
