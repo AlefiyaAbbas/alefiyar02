@@ -49,7 +49,7 @@ export default function Skills() {
               className="flex flex-wrap flex-row items-center justify-around p-4">
               {languages.map(({ name, icon, star }, index) => {
                 return (
-                  <div className={styles.card}>
+                  <div key={index} className={styles.card}>
                     {icon}
                     <div className={styles.textBox}>
                       <p className={styles.texthead}>{name}</p>
@@ -70,7 +70,7 @@ export default function Skills() {
               className="flex flex-wrap flex-row items-center justify-around p-4">
               {frameworks.map(({ name, icon, star }, index) => {
                 return (
-                  <div className={styles.card}>
+                  <div  key={index} className={styles.card}>
                     {icon}
                     <div className={styles.textBox}>
                       <p className={styles.texthead}>{name}</p>
