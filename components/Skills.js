@@ -24,7 +24,6 @@ export default function Skills() {
   ];
   console.log(styles)
   return (
-    <>
       <div className="w-full h-auto bg-zinc-800 font-cabinet py-4">
         <motion.div
           initial={{ x: -1000 }}
@@ -83,6 +82,5 @@ export default function Skills() {
           </div>
         </motion.div >
       </div >
-    </>
   );
 }
