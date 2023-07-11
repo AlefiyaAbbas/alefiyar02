@@ -71,7 +71,7 @@ export default function Project() {
           <span className="leading-10 md:leading-[64px]">Work</span>
         </motion.div>
 
-        <div className='md:mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5 w-full p-8'>
+        <div className='md:mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5 w-full px-16 py-6'>
           {projects.map((world, index) => (
             <Card
               key={world.id}

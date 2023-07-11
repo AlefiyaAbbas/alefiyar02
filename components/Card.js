@@ -37,11 +37,11 @@ const Card = ({ id, imgUrl, title, textstack, index, active, handleClick, extrnL
           {title}
         </h3>
       ) : (
-        <div className='absolute bottom-0 p-6 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.8)]'>
+        <div className='absolute bottom-0 px-4 py-2 flex justify-start w-full flex-col bg-[rgba(0,0,0,0.8)]'>
           <h2 className='md:my-[24px] font-semibold sm:text-4xl text-3xl text-teal-300 '>
             {title}
           </h2>
-          <p className='font-normal text-xl leading-[20.16px] text-slate-300 my-2'>
+          <p className='font-normal text-xl leading-[20.16px] text-slate-300 my-1'>
             {textstack}
           </p>
           <div className={`glassmorphism flex flex-row`}>
