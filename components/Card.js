@@ -4,7 +4,7 @@ import { BiLinkExternal, BiLogoGithub } from 'react-icons/bi'
 import { useState } from 'react';
 import Link from 'next/link';
 
-const Card = ({ id, imgUrl, title, textstack, index, active, handleClick, extrnLink }) => {
+const Card = ({ id, imgUrl, title, textstack, index, active, handleClick, extrnLink, git }) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleCardClick = () => {
@@ -27,12 +27,12 @@ const Card = ({ id, imgUrl, title, textstack, index, active, handleClick, extrnL
   return (
     <motion.div
       className={`relative ${active === id ? 'lg:flex-[3.5] flex-[10]' : 'lg:flex-[0.5] flex-[2]'
-        } flex items-center justify-center min-w-[170px] h-[500px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer bg-slate-200`}
+        } flex items-center justify-center min-w-[170px] h-[500px] transition-[flex] duration-[0.7s] ease-out-flex cursor-pointer bg-slate-200 customShadow`}
       onClick={handleCardClick}
     >
       {renderBackground()}
       {active !== id ? (
-        <h3 className='font-semibold sm:text-2xl text-xl text-zinc-800 absolute z-0 m-4 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0] 
+        <h3 className='font-semibold sm:text-2xl text-xl text-zinc-800 absolute z-1 m-4 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0] 
          w-full min-w-full'>
           {title}
         </h3>
@@ -45,7 +45,9 @@ const Card = ({ id, imgUrl, title, textstack, index, active, handleClick, extrnL
             {textstack}
           </p>
           <div className={`glassmorphism flex flex-row`}>
-            <BiLogoGithub className='text-4xl object-contain text-slate-200 md:m-2 mx-2' />
+            <Link href={git} target='_blank'>
+              <BiLogoGithub className='text-4xl object-contain text-slate-200 md:m-2 mx-2' />
+            </Link>
             {extrnLink ? (
               <Link href={extrnLink}>
                 <BiLinkExternal className='text-4xl object-contain text-slate-200 md:m-2 ' />

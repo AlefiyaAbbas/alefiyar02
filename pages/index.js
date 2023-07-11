@@ -10,7 +10,7 @@ import Cursor from '@/components/Cursor'
 export default function Home() {
 	return (
 		<main>
-			<Cursor />
+			{/* <Cursor /> */}
 			<Navbar />
 			<Socials />
 			<Hero />

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import styles from '../styles/about.module.css'
-import Alef from "../public/images/alef.png"
+import Alef from "../public/images/hero.png"
 import Image from 'next/image'
 import clsx from 'clsx'
 
@@ -8,21 +8,19 @@ import clsx from 'clsx'
 export default function About() {
   const Header = () => {
     return (
-      <div style={{ overflow: 'hidden' }}>
-        <motion.div
-          initial={{ x: 1000 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 1, delay: 4.5 }}
-          className='bg-zinc-800 w-1/2 ml-auto text-slate-200 h-10 mt-4 text-2xl md:h-16 md:w-1/4 md:mt-6 md:text-3xl px-4'
-        >
-          <span className='self-center leading-10 md:leading-[64px]  hover:text-teal-500'>About Me</span>
-        </motion.div>
-      </div>
+      <motion.div
+        // initial={{ x: 1000 }}
+        // animate={{ x: 0 }}
+        // transition={{ duration: 1, delay: 4.5 }}
+        className='bg-zinc-800 w-1/2 ml-auto text-slate-200 h-10 mt-4 text-2xl md:h-16 md:w-1/4 md:mt-2 md:text-3xl px-4 relative left-6 '
+      >
+        <div className='self-center leading-10 md:leading-[64px]  hover:text-teal-500'>About Me</div>
+      </motion.div>
     )
   }
   return (
     <div className='bg-zinc-800 h-min-screen flex justify-center items-center font-cabinet py-10'>
-      <div className='bg-slate-200 h-auto w-[90%] py-8'>
+      <div className='bg-slate-200 h-auto w-[90%] py-8 customShadow'>
         <Header />
         <section className='max-w-screen-xl mx-auto py-2'>
           <div className='container mx-auto flex md:flex-row-reverse flex-col-reverse items-center'>
@@ -55,7 +53,8 @@ export default function About() {
           </div> */}
             <div className={styles.cardContainer}>
               <div className={styles.profileDiv}>
-                <Image className="object-cover" src={Alef} alt="Alef" />
+              🢄
+                <Image className="object-contain" src={Alef} alt="Alef" />
               </div>
               <div className={styles.infoDiv}>
                 <div className={styles.nameDiv}>
@@ -87,7 +86,6 @@ export default function About() {
                 </div>
               </div>
             </div>
-
           </div>
         </section>
       </div>
