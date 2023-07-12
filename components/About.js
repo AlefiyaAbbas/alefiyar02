@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import styles from '../styles/about.module.css'
-import Alef from "../public/images/hero.png"
+import Alef from "../public/images/alef.png"
 import Image from 'next/image'
 import clsx from 'clsx'
 
@@ -53,7 +53,7 @@ export default function About() {
           </div> */}
             <div className={styles.cardContainer}>
               <div className={styles.profileDiv}>
-              🢄
+              {/* 🢄 */}
                 <Image className="object-contain" src={Alef} alt="Alef" />
               </div>
               <div className={styles.infoDiv}>

@@ -43,8 +43,8 @@ export default function Project() {
       id: 'project-5',
       imgUrl: '/images/agenda.webp',
       title: 'Agenda Builder',
-      extrnLink: false,
-      git:'',
+      extrnLink: 'https://agenda-builder-fgpr4he5c-srshah27.vercel.app/',
+      git:'https://github.com/srshah27/agenda-builder',
       textstack: 'React, NextJS, TailwindCSS, Framer Motion',
     },
     {
@@ -52,6 +52,7 @@ export default function Project() {
       imgUrl: '/images/object.png',
       title: 'Obj Detection',
       extrnLink: false,
+      git: false,
       textstack: 'React, NextJS, TailwindCSS, Framer Motion',
     },
 

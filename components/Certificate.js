@@ -134,7 +134,7 @@ export default function Certificate() {
   const [selected, setSelected] = useState('Top');
 
   return (
-    <div className="w-full h-auto bg-zinc-800 font-cabinet py-4">
+    <div className="w-full h-auto bg-zinc-800 font-cabinet p-4 pb-32">
       <motion.div
         // initial={{ x: -1000 }}
         // animate={{ x: 0 }}
@@ -162,15 +162,15 @@ export default function Certificate() {
           if (category.includes(selected)) {
             return (
               <div key={lang} className='h-auto w-auto bg-slate-200 p-2 text-zinc-800 customShadow'>
-                <a href={extlink} target="_blank" rel="noopener noreferrer" className="font-semibold sm:text-lg text-xl hover:text-teal-600">
+                <a href={extlink} target="_blank"  className="font-semibold sm:text-lg text-xl hover:text-teal-600">
                   {lang}
                 </a>
                 <div className='sm:text-base text-lg leading-[20.16px]'>
                   {platform}
                 </div>
                 <div className='text-base mt-7'>
-                  Date: {date} <br />
-                  Percent: {percent}
+                  {date} <br />
+                  {percent}
                 </div>
               </div>
             );

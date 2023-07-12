@@ -51,8 +51,9 @@ const Cursor = () => {
   return (
     <div
       ref={cursorRef}
-      className='w-4 h-4 border border-slate-200 fixed z-50 -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden transition duration-10'
-    ></div>
+      className=' w-0 h-0 border-y-[10px] border-y-transparent border-r-[15px] border-r-zinc-700 fixed z-50 rotate-180 pointer-events-none hidden transition duration-10'
+    >
+    </div>
   )
 }
 

@@ -1,49 +1,27 @@
 import styles from "../styles/socials.module.css";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { SiGmail } from "react-icons/si";
+import { ImProfile } from "react-icons/im";
 
 const Socials = () => {
   return (
-    <div className={styles.socialsContainer }>
+    <div className={styles.socialsContainer}>
       <div className={styles.card}>
-        <span className="font-cabinet">Connect</span>
+        <span className="font-cabinet">Socials</span>
         <a className={styles.socialLink} href="https://github.com/AlefiyaAbbas" target="_blank">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 496 500" xmlSpace="preserve" fill="#000000" alt="Social Media Icon">
-            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
-          </svg>
+          <BsGithub />
         </a>
 
         <a className={styles.socialLink} href="https://www.linkedin.com/in/alefiya-rampurawala-30851a204/" target="_blank">
-          <svg fill="#000000" viewBox="0 0 512 512" id="icons" xmlns="http://www.w3.org/2000/svg" className="icon">
-            <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
-          </svg>
+          <BsLinkedin/>
         </a>
 
         <a className={styles.socialLink} href="mailto:alefiyar02@gmail.com" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="gmail">
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <g>
-                <path d="M14.5 2h-13A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zm-1.766 1L8 6.738 3.266 3h9.468zM2 13V4.646l6 4.615 6-4.616V13H2z"></path>
-              </g>
-            </g>
-          </svg>
+          <SiGmail />
         </a>
 
         <a className={styles.socialLink} href="AlefiyaRampurawala_Resume.pdf" target="_blank">
-          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32" viewBox="0 0 32 32" id="resume">
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path fill="#231F20" d="M25.71,9.297c-0.001-0.002-0.003-0.003-0.004-0.005l-5.998-5.998c-0.001-0.001-0.003-0.002-0.004-0.003C19.702,3.288,19.5,3.145,19.421,3.1C19.348,3.058,19.224,3.013,19,3H7C6.447,3,6,3.448,6,4v24c0,0.552,0.447,1,1,1c6,0,12,0,18,0
-	c0.553,0,1-0.448,1-1V10C25.952,9.701,25.845,9.473,25.71,9.297z M22.586,9H20V6.414L22.586,9z M11,27v-2c0-2.757,2.243-5,5-5
-	s5,2.243,5,5v2H11z M14,16c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2S14,17.103,14,16z M24,27h-1v-2
-	c0-2.801-1.658-5.216-4.04-6.334C19.255,18.325,20.023,17.343,20,16c-0.032-1.901-1.64-4-4-4c-2.206,0-4,1.794-4,4
-	c0,1.028,0.4,1.957,1.04,2.666C10.658,19.784,9,22.199,9,25v2H8V5h10v5c0,0.552,0.447,1,1,1h5V27z M16,7c0,0.549-0.451,1-1,1h-5
-	C9.451,8,9,7.549,9,7s0.451-1,1-1h5C15.549,6,16,6.451,16,7z M16,10c0,0.549-0.451,1-1,1h-5c-0.549,0-1-0.451-1-1s0.451-1,1-1h5
-	C15.549,9,16,9.451,16,10z">
-              </path>
-            </g>
-          </svg>
+        <ImProfile/>
         </a>
       </div>
     </div>

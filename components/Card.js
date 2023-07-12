@@ -32,8 +32,8 @@ const Card = ({ id, imgUrl, title, textstack, index, active, handleClick, extrnL
     >
       {renderBackground()}
       {active !== id ? (
-        <h3 className='font-semibold sm:text-2xl text-xl text-zinc-800 absolute z-1 m-4 lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0] 
-         w-full min-w-full'>
+        <h3 className='font-semibold sm:text-2xl text-xl text-zinc-800 absolute z-1  lg:bottom-20 lg:rotate-[-90deg] lg:origin-[0,0] 
+         w-full min-w-full px-4'>
           {title}
         </h3>
       ) : (

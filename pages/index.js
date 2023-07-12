@@ -5,6 +5,7 @@ import Skills from '@/components/Skills'
 import Project from '@/components/Project'
 import Socials from '@/components/Socials'
 import Certificate from '@/components/Certificate'
+import Footer from '@/components/Footer'
 import Cursor from '@/components/Cursor'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
 			<Skills />
 			<Project />
 			<Certificate />
+			<Footer/>
 		</main>
 	)
 }
